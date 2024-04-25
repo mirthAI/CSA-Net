@@ -1,0 +1,5 @@
+[14:52:45.952] Namespace(volume_path='../data/Synapse/test_vol_h5', dataset='CSANet', num_classes=5, list_dir='./lists/lists_Synapse', max_iterations=300000, max_epochs=70, batch_size=16, seed=1234, n_gpu=1, img_size=224, base_lr=0.01, deterministic=1, n_skip=3, vit_name='R50-ViT-B_16', vit_patches_size=16, is_pretrain=True, Dataset=<class 'datasets.dataset_CSANet.CSANet_dataset'>, exp='CSANet_CSANet224')
+[14:52:45.963] TU_R50-ViT-B_16_skip3_30k_epo70_bs16
+[14:53:14.300] Namespace(volume_path='../data/Synapse/test_vol_h5', dataset='CSANet', num_classes=5, list_dir='./lists/lists_Synapse', max_iterations=300000, max_epochs=70, batch_size=16, seed=1234, n_gpu=1, img_size=224, base_lr=0.01, deterministic=1, n_skip=3, vit_name='R50-ViT-B_16', vit_patches_size=16, is_pretrain=True, Dataset=<class 'datasets.dataset_CSANet.CSANet_dataset'>, exp='CSANet_CSANet224')
+[14:53:14.300] TU_R50-ViT-B_16_skip3_30k_epo70_bs16
+[14:53:14.302] 30 test iterations per epoch
