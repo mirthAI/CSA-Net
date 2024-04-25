@@ -190,13 +190,15 @@ def test_single_volume(image_next, image, image_prev, label, net, classes, patch
     image1 = pred_image
     image2 = mask_img
     dice_coeff_1, dice_coeff_2, dice_coeff_3, dice_coeff_4 = 0.0, 0.0, 0.0, 0.0
+    # Dice Coefficient Calculation
     dice_coeff_1, dice_coeff_2, dice_coeff_3, dice_coeff_4= Dice_cal(image1, image2)
 
     
     labels = np.eye(classes)[label]
     outputs = np.eye(classes)[prediction]
     spacing = vol_image.GetSpacing() 
-    
+
+    # Hausdroff Distance Calculation
     hausdorff_dist_1 = compute_class_hausdorff(labels, outputs, 1, spacing)
     hausdorff_dist_2 = compute_class_hausdorff(labels, outputs, 2, spacing)
     hausdorff_dist_3 = compute_class_hausdorff(labels, outputs, 3, spacing)
