@@ -5,7 +5,7 @@ This repo holds code for [A Flexible 2.5D Medical Image Segmentation Approach wi
 ## Usage
 
 ### 1. Download Google pre-trained ViT models
-* [Get models in this link] (https://console.cloud.google.com/storage/browser/vit_models/imagenet21k?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&prefix=&forceOnObjectsSortingFiltering=false)): R50-ViT-B_16
+[Get models in this link](https://console.cloud.google.com/storage/vit_models/) : R50-ViT-B_16
 * Put the downloaded model file in 
 ```bash
 ../model/vit_checkpoint/imagenet21k/{MODEL_NAME}.npz
