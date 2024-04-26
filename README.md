@@ -29,7 +29,6 @@ cd CSANet/
 - Run the train script.
 
 ```bash
-cd CSANet/
 python train.py
 ```
 
