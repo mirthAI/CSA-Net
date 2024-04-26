@@ -47,7 +47,7 @@ parser.add_argument('--root_path', type=str,
 parser.add_argument('--dataset', type=str,
                     default='CSANet', help='experiment_name')
 parser.add_argument('--list_dir', type=str,
-                    default='./lists/lists_Synapse', help='list dir')
+                    default='./lists/lists_CSANet', help='list dir')
 parser.add_argument('--num_classes', type=int,
                     default=5, help='output channel of network') # class change -----------------
 parser.add_argument('--volume_path', type=str,
@@ -96,7 +96,7 @@ if __name__ == "__main__":
             'Dataset': CSANet_dataset,
             'root_path': '../data/Synapse/train_npz',
             'volume_path': '../data/Synapse/test_vol_h5',
-            'list_dir': './lists/lists_Synapse',
+            'list_dir': './lists/lists_CSANet',
             'num_classes': 5, 
             'z_spacing': 1,
         },
