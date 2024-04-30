@@ -38,9 +38,8 @@ ensure_directory_exists(save_image_path)
 ensure_directory_exists(save_mask_path)
 
 # Process volume files
-pattern = re.compile(r'^\d+\.nii\.gz$') 
 for file in os.listdir(path_to_scan):
-    if not file.startswith('._'):
+    if not file.startswith('.'):
         vol_path = os.path.join(path_to_scan, file)
         image = sitk.ReadImage(vol_path)
         img = sitk.GetArrayFromImage(image)
@@ -111,5 +110,5 @@ folder_path = 'data/testVol'
 files = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
 with open(vol_list_path, 'w') as file:
     for file_name in files:
-        if not file.startswith('._'):
+        if not file_name.startswith('._'):
           file.write(file_name + '\n')
