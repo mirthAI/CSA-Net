@@ -4,6 +4,7 @@ import SimpleITK as sitk
 import pandas as pd
 import csv
 import re
+import cv2
 def ensure_directory_exists(path):
     """
     Ensures that a directory exists; if not, creates it.
