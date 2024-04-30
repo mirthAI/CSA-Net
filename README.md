@@ -35,8 +35,6 @@ The directory structure of the whole project is as follows:
     ├── train_npz     
 ```
 
-You can also directly utilize list folder from utils to handle class imbalance issue [link](https://drive.google.com/drive/folders/1qAkX34E_5kP-2pKDI0RChqWKfTNl1FVQ?usp=sharing)
-
 ### 3. Environment
 
 Please prepare an environment with python=3.7, and then use the command "pip install -r requirements.txt" for the dependencies.
@@ -47,7 +45,7 @@ Please prepare an environment with python=3.7, and then use the command "pip ins
 python setup.py
 cd CSANet/
 ```
-
+You can also directly utilize lists folder from utils to handle class imbalance issue for the ProstateX dataset.
 - Run the train script.
 
 ```bash
