@@ -14,7 +14,7 @@ This repo holds code for [A Flexible 2.5D Medical Image Segmentation Approach wi
 ### 2. Prepare data
 
 1. Access to the ProstateX dataset:
-   1. Sign up in the [official ProstateX website](https://www.synapse.org/#!Synapse:syn3193805/wiki/) and download the dataset. Convert them to numpy format, normalize each 3D image to [0, 1], and extract 2D slices from 3D volume for training cases while keeping the 3D volume for testing cases.
+   1. Sign up in the [official ProstateX website](https://www.cancerimagingarchive.net/collection/prostatex/) and download the dataset. Convert them to numpy format, normalize each 3D image to [0, 1], and extract 2D slices from 3D volume for training cases while keeping the 3D volume for testing cases.
    2.  You can also directly use preprocesses dataset from this [link](https://drive.google.com/drive/folders/1qAkX34E_5kP-2pKDI0RChqWKfTNl1FVQ?usp=sharing)
 
 The directory structure of the whole project is as follows:
