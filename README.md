@@ -1,7 +1,7 @@
 # CSA-Net
 
 This repo holds code for [A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention](https://arxiv.org/pdf/..)
-
+ 
 ## Usage
 
 ### 1. Download Google pre-trained ViT models
@@ -21,25 +21,17 @@ The directory structure of the whole project is as follows:
 ```bash
 .
 ├── CSANet
-│   ├──dataset_CSANet.py
-│   └──networks
-│       └── vit_seg_modeling.py
-│       └── ....    
-│   ├──train.py
-│   ├──test.py
-│   ├──Result 
-│   └── ....
 ├── model
 │   └── vit_checkpoint
 │       └── imagenet21k
 │           ├── R50+ViT-B_16.npz
-│           └── *.npz
+│           
 └── data
     ├── trainVol
     ├── trainMask
     └── testVol
     ├── testMask
-    ├──      
+    ├── train_npz     
 ```
 
 ### 3. Environment
