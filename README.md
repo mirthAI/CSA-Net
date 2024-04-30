@@ -25,14 +25,14 @@ The directory structure of the whole project is as follows:
 ├── model
 │   └── vit_checkpoint
 │       └── imagenet21k
-│           ├── R50+ViT-B_16.npz
+│           └── R50+ViT-B_16.npz
 │           
 └── data
     ├── trainVol
     ├── trainMask
     └── testVol
     ├── testMask
-    ├── train_npz     
+    └── train_npz     
 ```
 
 ### 3. Environment
