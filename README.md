@@ -22,12 +22,12 @@ The directory structure of the whole project is as follows:
 .
 ├── CSANet
 │   ├──dataset_CSANet.py
-|   └──networks
-|       └── vit_seg_modeling.py
-|       └── ....    
+│   └──networks
+│       └── vit_seg_modeling.py
+│       └── ....    
 │   ├──train.py
 │   ├──test.py
-|   ├──Result 
+│   ├──Result 
 │   └── ....
 ├── model
 │   └── vit_checkpoint
