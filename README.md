@@ -1,12 +1,36 @@
 # CSA-Net
+Official PyTorch implementation of: 
 
-This repo holds code for [A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention](https://arxiv.org/pdf/..)
- 
+[A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention](https://arxiv.org/pdf/..)
+
+This is a 2.5D Cross-Slice and In-Slice attention-based transformer model for 2.5D MRI Dataset.
+
+The code is only for research purposes. If you have any questions regarding how to use this code, feel free to contact Amarjeet Kumar (amarjeetkumar@ufl.edu).
+
+## Requirements
+Python==3.9.16
+* torch==1.10.1
+* torchvision==0.11.2
+* numpy
+* opencv-python
+* tqdm
+* tensorboard
+* tensorboardX
+* ml-collections
+* medpy
+* SimpleITK
+* scipy
+* `pip install -r requirements.txt`
+
+## Dataset
+- ProstateX Dataset :- 
+- Dataset can be accessed here: [official ProstateX website](https://www.cancerimagingarchive.net/collection/prostatex/)
+
 ## Usage
 
 ### 1. Download Google pre-trained ViT models
-[Get models in this link](https://console.cloud.google.com/storage/browser/vit_models/imagenet21k?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&prefix=&forceOnObjectsSortingFiltering=false) : R50-ViT-B_16
-* Put the downloaded model file in 
+*[Get models in this link](https://console.cloud.google.com/storage/browser/vit_models/imagenet21k?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&prefix=&forceOnObjectsSortingFiltering=false) : R50-ViT-B_16
+* Save your model into folder "model/vit_checkpoint/imagenet21k/".
 ```bash
 ../model/vit_checkpoint/imagenet21k/{MODEL_NAME}.npz
 ```
@@ -14,7 +38,7 @@ This repo holds code for [A Flexible 2.5D Medical Image Segmentation Approach wi
 ### 2. Prepare data
 
 1. Access to the ProstateX dataset:
-   1. Sign up in the [official ProstateX website](https://www.cancerimagingarchive.net/collection/prostatex/) and download the dataset. Convert them to numpy format, normalize each 3D image to [0, 1], and extract 2D slices from 3D volume for training cases while keeping the 3D volume for testing cases.
+   1. Sign up in the [official ProstateX website](https://www.cancerimagingarchive.net/collection/prostatex/) and download the dataset. Partition it in training and testing dataset as :- trainVol, trainMask, testVol, testMask. Put these folders under data directory.
    2.  You can also directly use preprocesses dataset from this [link](https://drive.google.com/drive/folders/1qAkX34E_5kP-2pKDI0RChqWKfTNl1FVQ?usp=sharing)
 
 The directory structure of the whole project is as follows:
@@ -35,28 +59,19 @@ The directory structure of the whole project is as follows:
     └── train_npz     
 ```
 
-### 3. Environment
-
-Please prepare an environment with python=3.7, and then use the command "pip install -r requirements.txt" for the dependencies.
-
-### 4. Train/Test
-- Run the setup script. This will prepare the 2D training dataset from 3D Volumes and create the lists for training and testing data.
-```bash
-python setup.py
-cd CSANet/
+* Run the preprocessing script, which would generate train_npz folder containing 2D images in folder "data/", data list files in folder "lists/" and train.csv for overview.
 ```
-You can also directly utilize lists folder from utils to handle class imbalance issue for the ProstateX dataset.
-- Run the train script.
+python preprocessing.py
+```
+Note:- You can also directly utilize lists folder from utils to handle class imbalance issue for the ProstateX dataset.
 
-```bash
+### 3. Train/Test
+* Please go to the folder "CSANet/" and it's ready for you to train and test the model.
+```
 python train.py
-```
-
-- Run the test script. It supports testing on 3D volumes.
-
-```bash
 python test.py
 ```
+You can see the test outputs in the "Results/" folder.
 
 ## Reference
 * [Google ViT](https://github.com/google-research/vision_transformer)
