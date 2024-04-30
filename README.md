@@ -13,7 +13,34 @@ This repo holds code for [A Flexible 2.5D Medical Image Segmentation Approach wi
 
 ### 2. Prepare data
 
-Please go to ["./datasets/README.md"](datasets/README.md) for details.
+1. Access to the ProstateX dataset:
+   1. Sign up in the [official Synapse website](https://www.synapse.org/#!Synapse:syn3193805/wiki/) and download the dataset. Convert them to numpy format, normalize each 3D image to [0, 1], and extract 2D slices from 3D volume for training cases while keeping the 3D volume for testing cases.
+   2.  You can also directly use preprocesses dataset from this link 
+The directory structure of the whole project is as follows:
+
+```bash
+.
+├── CSANet
+│   ├──dataset_CSANet.py
+|   └──networks
+|       └── vit_seg_modeling.py
+|       └── ....    
+│   ├──train.py
+│   ├──test.py
+|   ├──Result 
+│   └── ....
+├── model
+│   └── vit_checkpoint
+│       └── imagenet21k
+│           ├── R50+ViT-B_16.npz
+│           └── *.npz
+└── data
+    ├── trainVol
+    ├── trainMask
+    └── testVol
+    ├── testMask
+    ├──      
+```
 
 ### 3. Environment
 
