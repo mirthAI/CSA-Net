@@ -40,7 +40,7 @@ ensure_directory_exists(save_mask_path)
 # Process volume files
 pattern = re.compile(r'^\d+\.nii\.gz$') 
 for file in os.listdir(path_to_scan):
-    if pattern.match(file):
+    if not file.startswith('._'):
         vol_path = os.path.join(path_to_scan, file)
         image = sitk.ReadImage(vol_path)
         img = sitk.GetArrayFromImage(image)
@@ -60,7 +60,7 @@ for file in os.listdir(path_to_scan):
 
 # Process mask files
 for file in os.listdir(mask_path_to_scan):
-    if pattern.match(file):
+    if not file.startswith('._'):
         mask_path = os.path.join(mask_path_to_scan, file)
         mask = sitk.ReadImage(mask_path)
         mask_img = sitk.GetArrayFromImage(mask)
@@ -78,7 +78,7 @@ with open(csv_filename, mode='w', newline='') as csv_file:
     csv_writer = csv.writer(csv_file)
     csv_writer.writerow(['image', 'mask'])
     for file in os.listdir(path_to_scan):
-        if pattern.match(file):
+        if not file.startswith('._'):
             number = file.split('.')[0]
             for i in range(img.shape[0]):
                 seg_file_name = f"{number}_mask_slice_{i}.npy"
