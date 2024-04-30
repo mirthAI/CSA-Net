@@ -38,8 +38,13 @@ Python==3.9.16
 ### 2. Prepare data
 
 1. Access to the ProstateX dataset:
-   1. Sign up in the [official ProstateX website](https://www.cancerimagingarchive.net/collection/prostatex/) and download the dataset. Partition it in training and testing dataset as :- trainVol, trainMask, testVol, testMask. Put these folders under data directory.
-   2.  You can also directly use preprocesses dataset from this [link](https://drive.google.com/drive/folders/1qAkX34E_5kP-2pKDI0RChqWKfTNl1FVQ?usp=sharing)
+   Sign up in the [official ProstateX website](https://www.cancerimagingarchive.net/collection/prostatex/) and download the dataset. Partition it in training and testing dataset as :- trainVol, trainMask, testVol, testMask. Put these folders under data directory.
+      * Run the preprocessing script, which would generate train_npz folder containing 2D images in folder "data/", data list files in folder "lists/" and train.csv for overview.
+```
+python preprocessing.py
+```
+OR You can download the preprocessed dataset using this [link](https://drive.google.com/drive/folders/1qAkX34E_5kP-2pKDI0RChqWKfTNl1FVQ?usp=sharing). After downloading, copy  "list" directory from utils to "/CSANet" path to store text files containing the names of all samples for each task.
+You can  download a copy of the preprocessed dataset using this [link](https://drive.google.com/drive/folders/1qAkX34E_5kP-2pKDI0RChqWKfTNl1FVQ?usp=sharing). Followed by which include a directory titled "list" for storing a set of text files housing names of all the samples for each task.
 
 The directory structure of the whole project is as follows:
 
@@ -59,10 +64,7 @@ The directory structure of the whole project is as follows:
     └── train_npz     
 ```
 
-* Run the preprocessing script, which would generate train_npz folder containing 2D images in folder "data/", data list files in folder "lists/" and train.csv for overview.
-```
-python preprocessing.py
-```
+
 Note:- You can also directly utilize lists folder from utils to handle class imbalance issue for the ProstateX dataset.
 
 ### 3. Train/Test
