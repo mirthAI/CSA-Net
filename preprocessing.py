@@ -111,4 +111,5 @@ folder_path = 'data/testVol'
 files = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
 with open(vol_list_path, 'w') as file:
     for file_name in files:
-        file.write(file_name + '\n')
+        if not file.startswith('._'):
+          file.write(file_name + '\n')
