@@ -3,7 +3,7 @@ import numpy as np
 import SimpleITK as sitk
 import pandas as pd
 import csv
-
+import re
 def ensure_directory_exists(path):
     """
     Ensures that a directory exists; if not, creates it.
@@ -37,34 +37,37 @@ ensure_directory_exists(save_image_path)
 ensure_directory_exists(save_mask_path)
 
 # Process volume files
+pattern = re.compile(r'^\d+\.nii\.gz$') 
 for file in os.listdir(path_to_scan):
-    vol_path = os.path.join(path_to_scan, file)
-    image = sitk.ReadImage(vol_path)
-    img = sitk.GetArrayFromImage(image)
-    number = file.split('.')[0]
-    for i in range(img.shape[0]):
-        img_array = img[i, :, :].astype(np.uint8)
-        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-        img_array = clahe.apply(img_array)
-        p1 = np.percentile(img_array, 1)
-        p99 = np.percentile(img_array, 99)
-
-        normalized_img = (img_array - p1) / (p99 - p1)
-        normalized_img = np.clip(normalized_img, 0, 1)
-        slice_name = f"{number}_vol_slice_{i}.npy"
-        slice_path = os.path.join(save_image_path, slice_name)
-        np.save(slice_path, normalized_img)
+    if pattern.match(file):
+        vol_path = os.path.join(path_to_scan, file)
+        image = sitk.ReadImage(vol_path)
+        img = sitk.GetArrayFromImage(image)
+        number = file.split('.')[0]
+        for i in range(img.shape[0]):
+            img_array = img[i, :, :].astype(np.uint8)
+            clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+            img_array = clahe.apply(img_array)
+            p1 = np.percentile(img_array, 1)
+            p99 = np.percentile(img_array, 99)
+    
+            normalized_img = (img_array - p1) / (p99 - p1)
+            normalized_img = np.clip(normalized_img, 0, 1)
+            slice_name = f"{number}_vol_slice_{i}.npy"
+            slice_path = os.path.join(save_image_path, slice_name)
+            np.save(slice_path, normalized_img)
 
 # Process mask files
 for file in os.listdir(mask_path_to_scan):
-    mask_path = os.path.join(mask_path_to_scan, file)
-    mask = sitk.ReadImage(mask_path)
-    mask_img = sitk.GetArrayFromImage(mask)
-    number = file.split('.')[0]
-    for i in range(mask_img.shape[0]):
-        slice_name = f"{number}_mask_slice_{i}.npy"
-        slice_path = os.path.join(save_mask_path, slice_name)
-        np.save(slice_path, mask_img[i,:,:])
+    if pattern.match(file):
+        mask_path = os.path.join(mask_path_to_scan, file)
+        mask = sitk.ReadImage(mask_path)
+        mask_img = sitk.GetArrayFromImage(mask)
+        number = file.split('.')[0]
+        for i in range(mask_img.shape[0]):
+            slice_name = f"{number}_mask_slice_{i}.npy"
+            slice_path = os.path.join(save_mask_path, slice_name)
+            np.save(slice_path, mask_img[i,:,:])
 
 # Create CSV file for training data
 if not os.path.exists("CSANet/lists"):
@@ -74,11 +77,12 @@ with open(csv_filename, mode='w', newline='') as csv_file:
     csv_writer = csv.writer(csv_file)
     csv_writer.writerow(['image', 'mask'])
     for file in os.listdir(path_to_scan):
-        number = file.split('.')[0]
-        for i in range(img.shape[0]):
-            seg_file_name = f"{number}_mask_slice_{i}.npy"
-            vol_file_name = f"{number}_vol_slice_{i}.npy"
-            csv_writer.writerow([vol_file_name, seg_file_name])
+        if pattern.match(file):
+            number = file.split('.')[0]
+            for i in range(img.shape[0]):
+                seg_file_name = f"{number}_mask_slice_{i}.npy"
+                vol_file_name = f"{number}_vol_slice_{i}.npy"
+                csv_writer.writerow([vol_file_name, seg_file_name])
 
 # Ensure essential files exist
 image_list_path = "CSANet/lists/train_image.txt"
