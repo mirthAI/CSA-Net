@@ -44,7 +44,6 @@ Python==3.9.16
 python preprocessing.py
 ```
 OR You can download the preprocessed dataset using this [link](https://drive.google.com/drive/folders/1qAkX34E_5kP-2pKDI0RChqWKfTNl1FVQ?usp=sharing). After downloading, copy  "list" directory from utils to "/CSANet" path to store text files containing the names of all samples for each task.
-You can  download a copy of the preprocessed dataset using this [link](https://drive.google.com/drive/folders/1qAkX34E_5kP-2pKDI0RChqWKfTNl1FVQ?usp=sharing). Followed by which include a directory titled "list" for storing a set of text files housing names of all the samples for each task.
 
 The directory structure of the whole project is as follows:
 
