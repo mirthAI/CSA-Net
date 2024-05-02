@@ -1,4 +1,7 @@
-# CSA-Net
+# CSA-Net: A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention
+
+![image](https://github.com/mirthAI/CSA-Net/assets/26433669/f2f55c71-0361-478c-85e8-dedf3cc13659)
+
 Official PyTorch implementation of: 
 
 [A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention](https://arxiv.org/abs/2405.00130)
