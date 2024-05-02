@@ -188,9 +188,6 @@ class CSANet_dataset(Dataset):
             
             for i in range(img.shape[0]):
                 img_array = img[i, :, :].astype(np.uint8)
-                clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-                img_array = clahe.apply(img_array)
-                
                 p1 = np.percentile(img_array, 1)
                 p99 = np.percentile(img_array, 99)
 
