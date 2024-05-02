@@ -130,7 +130,7 @@ def trainer_CSANet(args, model, snapshot_path):
             logging.info('iteration %d : loss : %f, loss_ce: %f' % (iter_num, loss.item(), loss_ce.item()))
 
         # End-of-epoch validation and checkpointing
-        if epoch_num % 5 == 0 or epoch_num == 39:
+        if epoch_num > 10 and (epoch_num % 5 == 0 or epoch_num == 39):
             avg_dice = vol_inference(args, model, validation=True)
             if avg_dice > best_performance:
                 best_performance = avg_dice
