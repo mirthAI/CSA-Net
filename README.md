@@ -3,12 +3,6 @@ Official PyTorch implementation of:
 
 [A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention](https://arxiv.org/abs/2405.00130)
 
-<p align="center">
-  <img src="https://github.com/mirthAI/CSA-Net/assets/26433669/c76e9c37-23f5-4805-8c67-671be7e1f97e" alt="Image" />
-</p>
-
-
-
 The code is only for research purposes. If you have any questions regarding how to use this code, feel free to contact Amarjeet Kumar (amarjeetkumar@ufl.edu).
 
 ## Requirements
@@ -75,6 +69,10 @@ python train.py
 python test.py
 ```
 You can see the test outputs in the "Results/" folder.
+
+<p align="center">
+  <img src="https://github.com/mirthAI/CSA-Net/assets/26433669/c76e9c37-23f5-4805-8c67-671be7e1f97e" alt="Image" />
+</p>
 
 ## Reference
 * [Google ViT](https://github.com/google-research/vision_transformer)
