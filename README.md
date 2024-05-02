@@ -78,7 +78,7 @@ You can see the test outputs in the "Results/" folder.
 ## Citations
 Kindly cite our paper as follows if you use our code.
 ```bibtex
-@misc{sivaraman2024retinaregnet,
+@misc{kumar2024CSANet,
     title={A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention},
     author={Amarjeet Kumar and Hongxu Jiang and Muhammad Imran and Cyndi Valdes and Gabriela Leon and Dahyun Kang and  Parvathi Nataraj and Yuyin Zhou and Michael D. Weiss and Wei Shao},
     year={2024},
