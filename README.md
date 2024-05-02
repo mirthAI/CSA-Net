@@ -14,18 +14,9 @@ The code is only for research purposes. If you have any questions regarding how 
 
 ## Requirements
 Python==3.9.16
-* torch==1.10.1
-* torchvision==0.11.2
-* numpy
-* opencv-python
-* tqdm
-* tensorboard
-* tensorboardX
-* ml-collections
-* medpy
-* SimpleITK
-* scipy
-* `pip install -r requirements.txt`
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
 
@@ -66,9 +57,6 @@ The directory structure of the whole project is as follows:
     └── train_npz     
 ```
 
-
-Note:- You can also directly utilize lists folder from utils to handle class imbalance issue for the ProstateX dataset.
-
 ### 3. Train/Test
 * Please go to the folder "CSANet/" and it's ready for you to train and test the model.
 ```
@@ -76,10 +64,6 @@ python train.py
 python test.py
 ```
 You can see the test outputs in the "Results/" folder.
-
-<p align="center">
-  <img src="https://github.com/mirthAI/CSA-Net/assets/26433669/c76e9c37-23f5-4805-8c67-671be7e1f97e" alt="Image" />
-</p>
 
 ## Reference
 * [Google ViT](https://github.com/google-research/vision_transformer)
@@ -90,9 +74,6 @@ This project incorporates concepts and implementations based on the following re
    - "Emergent Correspondence from Image Diffusion": [Paper](https://arxiv.org/pdf/2102.04306) | [GitHub Repository](https://github.com/Beckschen/TransUNet)
    - "Non-local Neural Networks": [Paper](https://arxiv.org/abs/1711.07971) | [GitHub Repository](https://github.com/facebookresearch/video-nonlocal-net)
   
-
-These contributions are detailed further in the respective sections of our code.
-
 
 ## Citations
 Kindly cite our paper as follows if you use our code.
