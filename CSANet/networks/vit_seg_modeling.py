@@ -206,7 +206,7 @@ class NLBlockND_multicross(nn.Module):
             
             outputs.append(output)
         final_output = torch.cat(outputs, dim=1)
-        final_output = final_output + x_thisBranch #Changed
+        #final_output = final_output + x_thisBranch #Changed
         return final_output   
     
     
@@ -303,7 +303,7 @@ class Embeddings(nn.Module):
         xt = torch.cat([xt2,xt3,xt1], dim=1)
         xy = self.downcross_three(xt)
         
-        x = self.patch_embeddings(x)  # (B, hidden. n_patches^(1/2), n_patches^(1/2))
+        x = self.patch_embeddings(xy)  # (B, hidden. n_patches^(1/2), n_patches^(1/2))
         x = x.flatten(2)
         x = x.transpose(-1, -2)  # (B, n_patches, hidden)
 
