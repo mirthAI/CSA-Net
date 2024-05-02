@@ -35,7 +35,11 @@ def computing_COM_distance(mask_array, pred_array, US_indicies, spacing):
         temp = math.dist([cx_hist, cy_hist], [cx_us, cy_us])
         phy_temp = temp * spacing[0]
         dist.append(phy_temp)
-    return np.mean(dist)   
+    distances = np.array(dist)
+    percentile_95 = np.percentile(distances, 95)
+    mean_of_95th_percentile = np.mean(distances[distances <= percentile_95])
+    return mean_of_95th_percentile
+      
 
 
 
