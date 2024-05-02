@@ -86,6 +86,14 @@ You can see the test outputs in the "Results/" folder.
 * [ViT-pytorch](https://github.com/jeonsworld/ViT-pytorch)
 * [segmentation_models.pytorch](https://github.com/qubvel/segmentation_models.pytorch)
 
+This project incorporates concepts and implementations based on the following research papers and their corresponding code repositories:
+   - "Emergent Correspondence from Image Diffusion": [Paper](https://arxiv.org/pdf/2102.04306) | [GitHub Repository](https://github.com/Beckschen/TransUNet)
+   - "Non-local Neural Networks": [Paper](https://arxiv.org/abs/1711.07971) | [GitHub Repository](https://github.com/facebookresearch/video-nonlocal-net)
+  
+
+These contributions are detailed further in the respective sections of our code.
+
+
 ## Citations
 Kindly cite our paper as follows if you use our code.
 ```bibtex
