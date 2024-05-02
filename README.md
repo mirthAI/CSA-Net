@@ -2,7 +2,10 @@
 Official PyTorch implementation of: 
 
 [A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention](https://arxiv.org/abs/2405.00130)
-![image](https://github.com/mirthAI/CSA-Net/assets/26433669/c76e9c37-23f5-4805-8c67-671be7e1f97e)
+
+<p align="center">
+  <img src="https://github.com/mirthAI/CSA-Net/assets/26433669/c76e9c37-23f5-4805-8c67-671be7e1f97e" alt="Image" />
+</p>
 
 
 
