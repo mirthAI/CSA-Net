@@ -1,7 +1,7 @@
 # CSA-Net
 Official PyTorch implementation of: 
 
-[A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention]([https://arxiv.org/pdf/..](https://arxiv.org/abs/2405.00130))
+[A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention]([https://arxiv.org/abs/2405.00130])
 
 The code is only for research purposes. If you have any questions regarding how to use this code, feel free to contact Amarjeet Kumar (amarjeetkumar@ufl.edu).
 
@@ -74,3 +74,16 @@ You can see the test outputs in the "Results/" folder.
 * [Google ViT](https://github.com/google-research/vision_transformer)
 * [ViT-pytorch](https://github.com/jeonsworld/ViT-pytorch)
 * [segmentation_models.pytorch](https://github.com/qubvel/segmentation_models.pytorch)
+
+## Citations
+Kindly cite our paper as follows if you use our code.
+```bibtex
+@misc{sivaraman2024retinaregnet,
+    title={A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention},
+    author={Amarjeet Kumar and Hongxu Jiang and Muhammad Imran and Cyndi Valdes and Gabriela Leon and Dahyun Kang and  Parvathi Nataraj and Yuyin Zhou and Michael D. Weiss and Wei Shao},
+    year={2024},
+    eprint={2405.00130},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+```
