@@ -300,10 +300,10 @@ class Embeddings(nn.Module):
         xt2 = self.cross_attention_multi_2(x,x_prev)
         xt3 = self.cross_attention_multi_3(x,x)
        
-        xt = torch.cat([xt2,xt3,xt1], dim=1)
-        xy = self.downcross_three(xt)
+        xt = torch.cat([xt1,xt3,xt2], dim=1)
+        x = self.downcross_three(xt)
         
-        x = self.patch_embeddings(xy)  # (B, hidden. n_patches^(1/2), n_patches^(1/2))
+        x = self.patch_embeddings(x)  # (B, hidden. n_patches^(1/2), n_patches^(1/2))
         x = x.flatten(2)
         x = x.transpose(-1, -2)  # (B, n_patches, hidden)
 
