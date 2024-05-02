@@ -1,7 +1,7 @@
 # CSA-Net: A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention
 
 <p align="center">
-  <img src="https://github.com/mirthAI/CSA-Net/assets/26433669/f2f55c71-0361-478c-85e8-dedf3cc13659" alt="image" width="500">
+  <img src="https://github.com/mirthAI/CSA-Net/assets/26433669/f2f55c71-0361-478c-85e8-dedf3cc13659" alt="image">
   <br>
   <em>Figure 1: Visual representation of the CSA-Net architecture.</em>
 </p>
