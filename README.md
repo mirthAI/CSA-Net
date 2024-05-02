@@ -5,7 +5,7 @@
 Official PyTorch implementation of: 
 
 [A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention](https://arxiv.org/abs/2405.00130)
-
+*Figure 1: Visual representation of the CSA-Net architecture.*
 The code is only for research purposes. If you have any questions regarding how to use this code, feel free to contact Amarjeet Kumar (amarjeetkumar@ufl.edu).
 
 ## Requirements
