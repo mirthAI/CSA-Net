@@ -55,7 +55,7 @@ parser.add_argument('--volume_path', type=str,
 parser.add_argument('--max_iterations', type=int,
                     default=300000, help='maximum epoch number to train')
 parser.add_argument('--max_epochs', type=int,
-                    default=70, help='maximum epoch number to train')
+                    default=40, help='maximum epoch number to train')
 parser.add_argument('--batch_size', type=int,
                     default=16, help='batch_size per gpu')
 parser.add_argument('--n_gpu', type=int, default=1, help='total gpu')
