@@ -56,7 +56,7 @@ parser.add_argument('--list_dir', type=str,
 parser.add_argument('--max_iterations', type=int,
                     default=300000, help='maximum epoch number to train')
 parser.add_argument('--max_epochs', type=int,
-                    default=70, help='maximum epoch number to train')
+                    default=40, help='maximum epoch number to train')
 parser.add_argument('--batch_size', type=int,
                     default=16, help='batch_size per gpu')
 parser.add_argument('--seed', type=int,
@@ -64,7 +64,7 @@ parser.add_argument('--seed', type=int,
 parser.add_argument('--n_gpu', type=int, default=1, help='total gpu')
 parser.add_argument('--img_size', type=int,
                     default=224, help='input patch size of network input')
-parser.add_argument('--base_lr', type=float,  default=0.01,
+parser.add_argument('--base_lr', type=float,  default=0.001,
                     help='segmentation network learning rate')
 parser.add_argument('--deterministic', type=int,  default=1,
                     help='whether use deterministic training')
