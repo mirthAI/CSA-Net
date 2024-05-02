@@ -9,7 +9,6 @@
 217.nii.gz
 323.nii.gz
 296.nii.gz
-265.nii.gz
 334.nii.gz
 254.nii.gz
 320.nii.gz
@@ -21,9 +20,7 @@
 297.nii.gz
 304.nii.gz
 340.nii.gz
-244.nii.gz
 234.nii.gz
-311.nii.gz
 219.nii.gz
 332.nii.gz
 293.nii.gz
