@@ -8,7 +8,7 @@
 
 Official PyTorch implementation of: 
 
-[A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention](https://www.sciencedirect.com/science/article/pii/S0010482524012587)
+[A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention](https://doi.org/10.1016/j.compbiomed.2024.109173)
 
 The code is only for research purposes. If you have any questions regarding how to use this code, feel free to contact Amarjeet Kumar (amarjeetkumar@ufl.edu).
 
@@ -81,9 +81,10 @@ Kindly cite our paper as follows if you use our code.
 @misc{kumar2024CSANet,
     title={A Flexible 2.5D Medical Image Segmentation Approach with In-Slice and Cross-Slice Attention},
     author={Amarjeet Kumar and Hongxu Jiang and Muhammad Imran and Cyndi Valdes and Gabriela Leon and Dahyun Kang and  Parvathi Nataraj and Yuyin Zhou and Michael D. Weiss and Wei Shao},
+    journal={Computers in Biology and Medicine},
+    volume={182},
+    pages={109173},
     year={2024},
-    eprint={2405.00130},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+    publisher={Elsevier}
 }
 ```
